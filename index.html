@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Agenda</title>
+</head>
+
+<body>
+
+  <div id="app">
+
+    <div class="container center">
+      <h1>Agenda</h1>
+
+      <form id="app-form" class="form">
+        <input type="text" name="name" id="inputName" placeholder="Name" required>
+        <input type="number" name="phone" id="inputPhone" placeholder="Phone Number" required>
+        <input type="text" name="email" id="inputEmail" placeholder="E-mail" required>
+
+        <button id="btn" class="btn" type="submit">Add</button>
+
+        <div class="contact-list">
+          <ul id="list"></ul>
+        </div><!--contact-list-->
+      </form>
+
+    </div><!--container-->
+
+  </div><!--app-->
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
