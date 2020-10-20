@@ -1,4 +1,4 @@
-const addBtn = document.querySelector('.btn');
+const addBtn = document.querySelector('#btnSave');
 const listElement = document.getElementById('list');
 const appForm = document.getElementById('app-form');
 
@@ -28,7 +28,6 @@ function addContact (e) {
   console.log(contactList);
   console.log(person);
 
-
 }
 
 function formValidation(person) {
@@ -39,7 +38,7 @@ function formValidation(person) {
     error: ''
   }
 
-  if(person.name.length == 0) {
+  if(person.name.length === 0) {
     validation.status = false;
     validation.error = 'Insira um nome';
   }
@@ -90,7 +89,7 @@ function renderList() {
     editEl.setAttribute('href', '#');
     var editElTxt = document.createTextNode('Edit');
     editEl.appendChild(editElTxt);
-    editEl.setAttribute('onclicl', `editContact(${index})`);
+    editEl.setAttribute('onclick', `editContact(${index})`);
     //criando o botão edit
 
 
@@ -113,6 +112,45 @@ function removeContact(index) {
 
 }
 
-function editContact() {
+function editContact(index) {
+  const btnSave = document.querySelector('#btnSave');
+  const btnEdit = document.querySelector('#btnEdit');
+  const input_name = document.querySelector('#inputName');
+  const input_phone = document.querySelector('#inputPhone');
+  const input_email = document.querySelector('#inputEmail');
+
+  btnSave.setAttribute('style', 'display: none');
+  btnEdit.setAttribute('style', 'display: block');
+
+  input_name.value = contactList[index].name;
+  input_phone.value = contactList[index].phone;
+  input_email.value = contactList[index].email;
+
+  btnEdit.onclick = (e) => {
+    e.preventDefault();
+
+    const editedContact = {
+      name: input_name.value,
+      phone: input_phone.value,
+      email: input_email.value,
+    };
+
+    const validation = formValidation(editedContact);
+    if(!validation.status) {
+      alert(validation.error);
+      return;
+    }
+    console.log(editedContact.name.length);
+  
+    input_name.value = '';
+    input_phone.value = '';
+    input_email.value = '';
+  
+    btnSave.setAttribute('style', 'display: block');
+    btnEdit.setAttribute('style', 'display: none');
+
+    contactList[index] = editedContact;
+    renderList();
+  }
 
 }
