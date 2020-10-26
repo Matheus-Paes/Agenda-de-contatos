@@ -8,5 +8,5 @@ Desafios a serem cumpridos:
   - [x] Fazer um CRUD simples, tendo um botão para salvar o contato tendo a possibilidade de exlcuir ou editar.
   - [x] Validação de fomularios (Nome, telefone, email).
   - [] Ordenar contatos por ordem alfabetica.
-  - [] Mostrar contatos em forma de item e quando clicado abrir um card com as informações do mesmo.
   - [] O usuário deverá ter a possibilidade de favoritar seus contatos.
+  - [] Salvar contato no localStorage(solução provisória).

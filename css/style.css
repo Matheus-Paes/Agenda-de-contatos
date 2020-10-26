@@ -64,6 +64,8 @@ li {
   padding: 20px;
   background: #ccc;
   border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 li h2, li p {
@@ -89,3 +91,128 @@ li p {
 .contact-list ul li a:hover {
   background-color: slateblue;
 }
+
+
+/* 
+.modal {
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  top: -100%;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 2;
+  
+  transition: .2s;
+}
+
+.closeModal {
+  font-size: 50px;
+  color: #fff;
+  
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0 12px;
+  
+  transition: .2s;
+  cursor: pointer;
+}
+
+.closeModal:hover {
+  color: tomato;
+}
+
+.modal-card {
+  width: 30%;
+  height: 60%;
+
+  background-color: #ccc;
+  
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid #333;
+  border-radius: 12px;
+}
+
+.modal-content {
+  width: 50%;
+  height: 95%;
+
+  margin: 0 auto;
+  padding: 18px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  background-color: #333;
+  color: white;
+  border-radius: 12px;
+}
+
+.modal-avatar {
+  width: 100%;
+  height: 30%;
+  
+  text-align: center;
+
+}
+
+.user-avatar {
+  font-size: 120px;
+  color: #ccc;
+}
+
+.modal-info {
+  width: 100%;
+  height: 30%;
+  font-size: 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-info p {
+  margin: 5px 0;
+}
+
+.modal-btn-wrapper {
+  width: 100%;
+  height: 30%;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.modal-btn {
+  width: 45%;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+
+  padding: 8px;
+  margin: 0 8px;
+  border-radius: 8px;
+  background-color: blueviolet;
+  color: #fff;
+  transition: .2s;
+}
+
+.modal-btn:hover {
+  background-color: slateblue;
+} */
